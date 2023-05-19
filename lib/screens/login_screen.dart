@@ -55,15 +55,18 @@ class _LoginScreenState extends State<LoginScreen>
               const SizedBox(height: 24,),
 
               // button
-              Container(
-                child: const Text('Log in'),
-                width: double.infinity,
-                alignment: Alignment.center,
-                padding: const EdgeInsets.symmetric(vertical: 12),
-                decoration: const ShapeDecoration(
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(4))),
-                  color: blueColor,
-                  ),
+              InkWell(
+                onTap: () {},
+                child: Container(
+                  child: const Text('Log in'),
+                  width: double.infinity,
+                  alignment: Alignment.center,
+                  padding: const EdgeInsets.symmetric(vertical: 12),
+                  decoration: const ShapeDecoration(
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(4))),
+                    color: blueColor,
+                    ),
+                ),
               ),
               const SizedBox(height: 12,),
               Flexible(child: Container(), flex: 2,),
@@ -77,10 +80,13 @@ class _LoginScreenState extends State<LoginScreen>
                       vertical: 8
                     ),
                   ),
-                  Container(
-                    child: const Text("Sign up", style: TextStyle(fontWeight: FontWeight.bold),),
-                    padding: const EdgeInsets.symmetric(
-                      vertical: 8
+                  GestureDetector(
+                    onTap: () {},
+                    child: Container(
+                      child: const Text("Sign up", style: TextStyle(fontWeight: FontWeight.bold),),
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 8
+                      ),
                     ),
                   )
                 ],
